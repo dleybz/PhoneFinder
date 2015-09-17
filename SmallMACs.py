@@ -1,7 +1,7 @@
-from scapy.all import *
+from scapy.all import * #imports the scapy library
 
 def arp_display(pkt):
-  if pkt[ARP].op == 1: #who-has (request)
+  if pkt[ARP].op == 1: #who-has (request) 
     if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
       print "ARP Probe from: " + pkt[ARP].hwsrc
 
